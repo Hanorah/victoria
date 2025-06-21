@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Victoria Mansu</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">    <style>
+        .video-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .video-overlay.hidden {
+            opacity: 0 !important;
+            pointer-events: none !important;
+            visibility: hidden !important;
+        }
+        
+        /* Carousel Enhancements */
+        .carousel-indicators {
+            bottom: 30px;
+        }
+        
+        .carousel-indicators li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .carousel-indicators .active {
+            background-color: #fff;
+            border-color: #fff;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+        
+        .carousel-control-prev:hover .carousel-control-prev-icon,
+        .carousel-control-next:hover .carousel-control-next-icon {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        /* Carousel caption animation */
+        .carousel-item .carousel-caption {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        * {
+            box-sizing: border-box;
+        }
+          /* Mobile First Approach */
+        @media (max-width: 575.98px) {
+            /* Carousel responsive */
+            .carousel-item {
+                height: 70vh !important;
+                min-height: 300px !important;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 2rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .carousel-caption h3 {
+                font-size: 0.9rem !important;
+                padding: 0.5rem 1rem !important;
+                letter-spacing: 1px !important;
+            }
+            
+            .carousel-caption .p-3 {
+                padding: 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            /* About section responsive */
+            .bg-secondary {
+                padding: 2rem !important;
+            }
+            
+            .bg-secondary h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .bg-secondary p {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Video responsive - Fix overlay and play button */
+            .video-overlay {
+                height: 300px !important; /* Match video height */
+                min-height: 300px !important;
+                max-height: 300px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            
+            .video-overlay .btn-play {
+                width: 50px !important;
+                height: 50px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                position: relative !important;
+            }
+            
+            /* Section titles */
+            .section-title h1 {
+                font-size: 2rem !important;
+            }
+            
+            .section-title h6 {
+                font-size: 0.8rem !important;
+            }
+            
+            /* Videos responsive */
+            video {
+                max-height: 300px !important;
+                height: 300px !important;
+                object-fit: cover !important;
+            }
+            
+            /* Video containers on mobile */
+            .col-md-6[style*="min-height: 400px"] {
+                min-height: 300px !important;
+                height: 300px !important;
+            }
+            
+            /* Story section responsive */
+            .timeline .bg-secondary {
+                margin: 0 !important;
+                padding: 1.5rem !important;
+            }
+            
+            .timeline img {
+                margin: 0 !important;
+                margin-bottom: 1rem !important;
+            }
+        }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            /* Small tablets */
+            .carousel-item {
+                height: 80vh !important;
+                min-height: 350px !important;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .carousel-caption h3 {
+                font-size: 1rem !important;
+            }
+            
+            .bg-secondary {
+                padding: 2.5rem !important;
+            }
+            
+            video {
+                max-height: 400px !important;
+                height: 400px !important;
+            }
+            
+            .video-overlay {
+                height: 400px !important;
+                min-height: 400px !important;
+                max-height: 400px !important;
+            }
+            
+            .col-md-6[style*="min-height: 400px"] {
+                min-height: 400px !important;
+                height: 400px !important;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            /* Medium tablets */
+            .carousel-item {
+                height: 90vh !important;
+                min-height: 400px !important;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 3rem !important;
+            }
+            
+            .bg-secondary {
+                padding: 3rem !important;
+            }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            /* Large tablets/Small desktops */
+            .carousel-caption h1 {
+                font-size: 3.5rem !important;
+            }
+        }
+        
+        /* General responsive improvements */
+        .container-fluid {
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        /* Responsive text */
+        .display-4 {
+            font-size: calc(1.275rem + 0.3vw) !important;
+        }
+        
+        .display-1 {
+            font-size: calc(1.725rem + 5.7vw) !important;
+        }
+          /* Button responsive */
+        .btn-play {
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .btn-play:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        .btn-play span {
+            width: 0;
+            height: 0;
+            border-left: 15px solid #000;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 3px;
+        }
+          /* Video containers responsive */
+        .position-relative {
+            overflow: hidden;
+        }
+        
+        /* Ensure video overlays match video dimensions */
+        .video-overlay {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background-color: rgba(0,0,0,0.3) !important;
+            cursor: pointer !important;
+        }
+        
+        /* Carousel indicators responsive */
+        @media (max-width: 767.98px) {
+            .carousel-indicators {
+                bottom: 15px;
+            }
+            
+            .carousel-indicators li {
+                width: 8px;
+                height: 8px;
+                margin: 0 3px;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 8%;
+            }
+            
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Fix for text overflow */
+        .text-wrap {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Ensure videos are responsive */
+        video {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+            <!-- Carousel Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+                <li data-target="#header-carousel" data-slide-to="3"></li>
+                <li data-target="#header-carousel" data-slide-to="4"></li>
+            </ol>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="IMG-20250609-WA0011.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria Mansu</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">An Epitome Of Beauty</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="IMG-20250609-WA0012.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria Mansu</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Radiant & Beautiful</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="IMG-20250609-WA0013.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria Mansu</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Absolutely Stunning</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="IMG-20250609-WA0014.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria Mansu</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Pure Elegance</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 -->
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="IMG-20250609-WA0015.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Victoria Mansu</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Simply Perfect</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Navigation -->
+            <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">About</h6>
+                <h1 class="font-secondary display-4">Victoria Mansu</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">My Pearl
+</h3>
+                        <p>Happy Birthday to the woman who makes my world brighter just by being in it. From the moment you came into my life, every day has felt like a gift, but today is extra special because it’s the day the universe blessed us with you. 
+
+You are a rare kind of beautiful—inside and out. Your kindness, your intelligence, your laughter, and the way you care so deeply inspire me every single day. I hope this year brings you endless joy, success beyond your dreams, and love that overflows from every direction—especially from me, because I plan to spend this year (and every year after) making sure you feel as cherished as you truly are. 
+
+Blow out your candles knowing that you are adored, celebrated, and loved beyond measure. Here’s to you, my love—the most incredible woman I know.
+
+Forever yours</p>
+                        <h3 class="font-secondary font-weight-normal  mb-3">Victoria Mansu</h3>
+                          </div>                </div>                <div class="col-md-6 p-0 position-relative" style="min-height: 400px;">
+                    <video id="aboutVideo1" class="position-absolute w-100 h-100"  loop style="object-fit: cover;">
+
+                        <source src="lv_0_20250620024656.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>                    <div id="overlay1" class="video-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style="background-color: rgba(0,0,0,0.3); top: 0; left: 0; cursor: pointer;">
+                        <button type="button" class="btn-play">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-6 p-0 position-relative" style="min-height: 400px;">
+                  <video id="aboutVideo2" class="position-absolute w-100 h-100"  loop style="object-fit: cover;">
+                        <source src="lv_0_20250620030228.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div id="overlay2" class="video-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style="background-color: rgba(0,0,0,0.3); top: 0; left: 0; cursor: pointer;">
+                        <button type="button" class="btn-play">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">My Jewel</h3>
+                        <p>Victoria, if I could, I’d wrap up all the happiness in the world and give it to you today—but since I can’t, I’ll settle for spoiling you rotten instead. 😉 You deserve all the love, laughter, and cake your heart can handle (and trust me, I’ll make sure you get it). 
+
+Thank you for being you—for your strength, your wisdom, your beautiful heart, and the way you make even ordinary moments feel magical. Life with you is an adventure, and I wouldn’t want to navigate it with anyone else. 
+
+So today, let’s celebrate YOU—the woman who stole my heart and continues to amaze me every single day. Cheers to more memories, more love, and more of us. I love you endlessly.
+
+Cheers to many more</p>
+                        <h3 class="font-secondary font-weight-normal text-muted mb-3">Victoria Mansu</h3>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Story Start -->
+    <div class="container-fluid py-5" id="story">
+        <div class="container pt-5 pb-3">
+            <div class="section-title position-relative text-center">
+               
+                <h1 class="font-secondary display-4">Victoria Mansu</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="container timeline position-relative p-0">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">My 8th Wonder
+</h4>
+                           
+                            <p class="m-0">I just wanted to take a moment to celebrate you, not just for the incredible woman you are in my life, but for the phenomenal person you are all on your own. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                           
+                            <p class="m-0">Look at everything you’ve accomplished, every challenge you’ve turned into a victory, every moment you’ve risen stronger than before. You are power wrapped in grace, intelligence dressed in humility, and resilience wearing the most beautiful smile. The way you navigate life—with determination, wisdom, and an unshakable spirit—leaves me in awe.
+</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                           
+                            <p class="m-0">I see how hard you work, how much you care, how you turn obstacles into stepping stones. I see the way you lift others up and show up for them even when you’re carrying your own weight. I mean, who closes from work, shows up to church, shows up for a graduation party and still heads back to work? or driving all the way down to JoJo'splace just do do lashes for someone you barely know? Only you Vee, only you. I see the fire in you—the one that refuses to dim, no matter what life throws your way. That’s not just admirable; it’s inspiring. 
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                         
+                            <p class="m-0">Never forget how capable you are. Never forget how much you’ve already conquered. Never forget that you are a force—not because of anyone else, but because of you. The world is better because you’re here, and I hope you take time to honor yourself truly, to bask in your own light, to recognize just how extraordinary you are. I am really excited that you went on a vacation for your birthday, because ypu have earned it.
+Keep shining, keep winning, keep being you—because honestly, nobody does it better. 
+
+</p>
+<h3 class="font-secondary font-weight-normal text-muted mb-3">Always cheering for you</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Story End -->
+
+    <!-- Event Start -->
+    <div class="container-fluid py-5" id="event">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+
+                <h1 class="font-secondary display-4">He's promises for you</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>            <div class="row">
+                <div class="col-12 text-center">
+                    <video class="w-80" controls style="max-height: 500px;">
+                        <source src="Promises (feat. Joe L Barnes & Naomi Raine) _ Maverick City Music _ TRIBL.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Event End -->
+
+
+    <!-- Friends & Family Start -->
+    <div class="container-fluid py-5" id="family">
+        <div class="container pt-5 pb-3">
+            <div class="section-title position-relative text-center">
+
+                <h1 class="font-secondary display-4">My Prayer for you</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <video class="w-80" controls style="max-height: 500px;">
+                        <source src="The Blessing with Kari Jobe & Cody Carnes _ Live From Elevation Ballantyne _ Elevation Worship.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                
+                
+                
+              
+                
+            </div>
+        </div>
+    </div>
+    <!-- Friends & Family End -->
+
+
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Faster carousel transitions
+        $('#header-carousel').carousel({
+            interval: 2000,
+            ride: 'carousel'
+        });
+        
+        // Make carousel transition faster
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.carousel-item').css('transition-duration', '0.5s');
+        });
+        
+        function toggleVideo(videoId, overlayId) {
+            console.log('toggleVideo called with:', videoId, overlayId);
+            var video = document.getElementById(videoId);
+            var overlay = document.getElementById(overlayId);
+            
+            console.log('Video element:', video);
+            console.log('Overlay element:', overlay);
+            
+            if (video && overlay) {
+                if (video.paused) {
+                    console.log('Playing video');
+                    video.play().catch(error => {
+                        console.error('Error playing video:', error);
+                    });
+                } else {
+                    console.log('Pausing video');
+                    video.pause();
+                }
+            } else {
+                console.error('Video or overlay element not found');
+            }
+        }        function setupVideoEvents(videoId, overlayId) {
+            var video = document.getElementById(videoId);
+            var overlay = document.getElementById(overlayId);
+            
+            if (video && overlay) {
+                // Hide overlay when video starts playing
+                video.addEventListener('play', function() {
+                    console.log('Video started playing:', videoId);
+                    overlay.classList.add('hidden');
+                });
+                
+                // Show overlay when video is paused
+                video.addEventListener('pause', function() {
+                    console.log('Video paused:', videoId);
+                    overlay.classList.remove('hidden');
+                });
+                
+                // Show overlay when video ends
+                video.addEventListener('ended', function() {
+                    console.log('Video ended:', videoId);
+                    overlay.classList.remove('hidden');
+                });
+                
+                // Allow clicking on video to pause/play
+                video.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }
+        }
+
+        // Add event listeners when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up video controls');
+            
+            // Setup video events for both videos
+            setupVideoEvents('aboutVideo1', 'overlay1');
+            setupVideoEvents('aboutVideo2', 'overlay2');
+            
+            // Add click event to first video overlay
+            const overlay1 = document.getElementById('overlay1');
+            if (overlay1) {
+                overlay1.addEventListener('click', function() {
+                    toggleVideo('aboutVideo1', 'overlay1');
+                });
+            }
+            
+            // Add click event to second video overlay
+            const overlay2 = document.getElementById('overlay2');
+            if (overlay2) {
+                overlay2.addEventListener('click', function() {
+                    toggleVideo('aboutVideo2', 'overlay2');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
